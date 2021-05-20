@@ -19,6 +19,7 @@ void insertAtTail(node* &head, int val){
         return;
     }
     node* temp = head;
+
     while(temp -> next != NULL){
         temp = temp -> next;
     }
