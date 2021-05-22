@@ -3,11 +3,11 @@ using namespace std;
 
 #define n 100
 
-class stack1{
+class stack2{
     int* arr;
     int top;
     public:
-        stack1(){
+        stack2(){
             arr = new int [n];
             top = -1;
         }
@@ -23,7 +23,7 @@ class stack1{
 
         void pop(){
             if(top == -1){
-                cout << "No value to Pop";
+                cout << "No element to Pop";
                 return;
             }
             top--;
@@ -44,7 +44,7 @@ class stack1{
 };
   
 int main(){
-    stack1 st;
+    stack2 st;
     st.push(1);
     st.push(2);
     st.push(3);
