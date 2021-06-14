@@ -13,7 +13,21 @@ struct Node{
     }
 };
 
+int maxPathSumUtil(Node* root, int ans){
+    if(root == NULL)
+        return 0;
+    int left = maxPathSumUtil(root -> left, ans);
+    int right = maxPathSumUtil(root -> right, ans);
+    int nodeMax = max(max(root -> data, root -> data + left + right), max(root -> data + left, root -> data + right));
+    ans = max(ans, nodeMax);
+    //int singlePathSum = max(root -> data, max(root -> data + left, root -> data + right));
+    return ans;
+}
 
+int maxPathSum(Node* root){
+    int ans = INT_MIN;
+    return maxPathSumUtil(root, ans);
+}
   
 int main(){
     struct Node* root = new Node(1);
@@ -23,5 +37,6 @@ int main(){
     root -> left -> right = new Node(5);
     root -> right -> left = new Node(6);
     root -> right -> right = new Node(7);
+    cout << maxPathSum(root);
     return 0;
 }
