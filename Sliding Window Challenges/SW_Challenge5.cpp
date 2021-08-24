@@ -7,9 +7,9 @@
 
 //Approach 1 - Generate all subarrays of size K and count number of perfect numbers. Time Complexity - O(n*k)
 
-//Trick - Convert the given array into a binary array with values 0 & 1 only                    
+//Trick - Convert the given array into a binary array with values 0 & 1 only
 
-//Approach 2 - Sliding Window Method 
+//Approach 2 - Sliding Window Method
 //     - Traverse the array and if the number at index i is a perfect number then replace value at ith index with '1', else with a '0'.
 //     - Initialize a variable to store sum of divisors.
 //     - Traverse every number less than arr[i] and add it to the sum if it is a divisor of arr[i].
