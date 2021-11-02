@@ -32,7 +32,7 @@ void primsMST(int source){
         dist[i] = INF;
     set<vi> s;
     dist[source] = 0;
-    s.insert{{0, source}};
+    s.insert({0, source})  ;
     while(!s.empty()){
         auto x = *(s.begin());
         s.erase(x);
