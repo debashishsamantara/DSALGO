@@ -14,8 +14,9 @@ int binarySearch(int arr[], int n, int key){
         }
         else{
             s=mid+1;
-        }   
+        }
     }
+    return -1; 
 }
 
 int main(){
@@ -32,12 +33,12 @@ int main(){
 /*Time Compexity*/
 //After first iteration, length of array -> n
 //After second iteration, length of array -> n/2
-//After third iteration, length of array -> (n/2)/2 = n/(2^2)
-//After n iterations, length of array -> n/(2^k)
+//After third iteration, length of array -> (n/2)/2 = n/(2²)
+//After n iterations, length of array -> n/(2ᵏ)
 //Let the length of array become 1 after k iterations
-//=> n/2^k = 1
-//=> n = 2^k
-//=> log2(n) = log2(2^k) (Taking log both sides)
-//=> log2(n) = klog2(2) (log2(2) = 1)
-//=> k = log2(n)
-//Therefore, complexity will be O(log2(n))
+//=> n/2ᵏ = 1
+//=> n = 2ᵏ
+//=> log₂(n) = log₂(2ᵏ) (Taking log both sides)
+//=> log₂(n) = klog₂(2) (log₂(2) = 1)~
+//=> k = log₂(n)
+//Therefore, complexity will be O(log₂(n))

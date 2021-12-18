@@ -37,7 +37,7 @@ int dp[N];
 //         return n;
 //     if(dp[n] != MOD)
 //         return dp[n];
-//     // int ans = MOD;
+//       //int ans = MOD;
 //     for(int i = 1; i*i <= n; i++)
 //         dp[n] = min(dp[n], 1 + minSquare(n - i*i));
 //     return dp[n];
@@ -58,10 +58,10 @@ int main(){
     dp[1] = 1;
     dp[2] = 2;
     dp[3] = 3;
-    for(int i = 1; i*i <= n; i++){
-        for(int j = 0; i*i+j <= n; j++){
+    for(int i = 1; i <= sqrt(n); i++){
+        for(int j = 0; i+j <= sqrt(n); j++){
             dp[i*i + j] = min(dp[i*i + j], 1 + dp[j]);
-        }
+        } 
     }
     cout << dp[n] << endl;
     return 0;
